@@ -40,7 +40,7 @@ public class UnscramblerTest {
         consumedBlocks.forEach(block -> assertThat(phraseToTest.contains(block.getWord()), is(true)));
         int i = 0;
         for(Block block : consumedBlocks) {
-            block.getWord().equals(consumedBlocks.get(i).getWord());
+            assertThat(block.getWord().equals(consumedBlocks.get(i).getWord()), is(true));
             i++;
         }
     }
